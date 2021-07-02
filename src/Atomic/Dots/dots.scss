@@ -1,0 +1,16 @@
+.dotContainer {
+  width: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    &.light {
+      background-color: #eee;
+    }
+    &.dark {
+      background-color: #111;
+    }
+  }
+}

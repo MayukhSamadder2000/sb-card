@@ -1,0 +1,64 @@
+.card {
+  width: 20em;
+  height: 25em;
+  position: relative;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  .cardTop {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 65%;
+    padding-top: 1em;
+    z-index: 10;
+  }
+  .cardBtm {
+    width: 90%;
+    margin: 0 auto;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  &.light {
+    position: relative;
+    transition: 0.3s ease;
+    &:hover::before {
+      transform: scale(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #fad380;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      transform-origin: right;
+      transform: scale(0.9);
+      z-index: -1;
+      transition: 0.3s ease;
+    }
+  }
+  &.dark {
+    position: relative;
+    transition: 0.3s ease;
+    &:hover::before {
+      transform: scale(1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #121222;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      transform-origin: right;
+      transform: scale(0.9);
+      z-index: -1;
+      transition: 0.3s ease;
+    }
+  }
+}

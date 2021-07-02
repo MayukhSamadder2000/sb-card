@@ -1,0 +1,33 @@
+.bigImageContainer {
+  height: 100%;
+  width: 100%;
+  min-height: 10em;
+  min-width: 13em;
+  max-height: 18em;
+  overflow: auto;
+  max-width: 30em;
+  background: url(https://picsum.photos/600/300);
+  background-size: cover;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(1, 1, 1, 0.37);
+  overflow: hidden;
+  &:hover {
+    .icons {
+      transform: rotate(0deg) translateX(0px) translateY(0px) scale(1);
+      opacity: 1;
+    }
+  }
+  .icons {
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    transition: 0.3s ease;
+    transform: rotate(-30deg) translateX(-10px) translateY(-10px) scale(0.6);
+    transform-origin: left;
+    opacity: 0;
+    .icon {
+      color: #fff;
+      margin: 0 5px;
+    }
+  }
+}
